@@ -5,7 +5,7 @@
 下面是自己整理的一个编码相关的流程示意图：<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/369637/1636105411716-6c316751-1ce0-4178-8a58-b2a527f3274c.png#clientId=u5b960f05-d672-4&from=paste&height=282&id=u371a69d4&margin=%5Bobject%20Object%5D&name=image.png&originHeight=778&originWidth=1658&originalType=binary&ratio=1&size=102489&status=done&style=stroke&taskId=u5106c15e-da5e-4b2b-a35a-1ea0e89f8f0&width=600)<br /><br />
 
 <a name="LtgKC"></a>
-# 1 &emsp;[ASCII 字符集](http://17de.com/library/c/ascii.html)
+# 1 &nbsp;[ASCII 字符集](http://17de.com/library/c/ascii.html)
 
 <br />**ASCII：美国信息交换标准代码**。20 世纪 60 年代，美国人发明的。
 
@@ -19,11 +19,11 @@
 <br />
 
 <a name="mIt2R"></a>
-# 2  &emsp;非 ASCII 字符集
+# 2  &nbsp;非 ASCII 字符集
 
 <br />上面说 ASCII 编码一共是 128 个， 英语的表示是够了，但是表示其他语言的话，128 个字符远远是不够的。不同国家就同一个字母的表示方式是不同的，语言特有的字符更是数不胜数，就汉字来说，多达 10 万个，常用汉字多达六千多个。一个字节表示肯定是远远不够的，因此使用其他方式进行解决。<br />​<br />
 <a name="YhZKA"></a>
-## 2.1 &emsp;[GB2312 字符集](https://zh.wikipedia.org/wiki/GB_2312)
+## 2.1 &nbsp;[GB2312 字符集](https://zh.wikipedia.org/wiki/GB_2312)
 
 <br />**GB2312：中国国家标准简体中文字符集。**中国计算机科学家设计了一种字符集，收录了汉字、拉丁文字母、希腊字母等多种文字及字母。公共包含汉字 6763 个，其他文字符号 682 个（注意：GB2312 字符集并没有收录 ASCII 字符集中的字符）。<br />
 <br />具体编码方式与上面编码有所区别，因为涉及的字符太多了。使用的是 分区概念。一共划分 94 个区，每个区收录 94 个字符。所以定位方式就是放在第几区的第几个字符。汉字“啊”放在 16 区的第一位，因此对应的数字是 1601（即区位码是 1601）。
@@ -41,7 +41,7 @@
 
 ​<br />
 <a name="FgY06"></a>
-## 2.2 &emsp; [GBK 字符集](https://zh.wikipedia.org/wiki/%E6%B1%89%E5%AD%97%E5%86%85%E7%A0%81%E6%89%A9%E5%B1%95%E8%A7%84%E8%8C%83)
+## 2.2 &nbsp; [GBK 字符集](https://zh.wikipedia.org/wiki/%E6%B1%89%E5%AD%97%E5%86%85%E7%A0%81%E6%89%A9%E5%B1%95%E8%A7%84%E8%8C%83)
 
 <br />**GBK： 汉字内码扩展规范。**中国汉字太多，许多不太经常使用的字符没有收录，台湾香港使用的繁体字也没有进行收录，GBK 字符集就是在 GB2312 字符集基础上，对收录字符进行了补充。<br />​<br />
 
@@ -52,7 +52,7 @@
 
 ​<br />
 <a name="bGxQI"></a>
-## 2.3 &emsp; [GB18030 字符集](https://zh.wikipedia.org/wiki/GB_18030)
+## 2.3 &nbsp; [GB18030 字符集](https://zh.wikipedia.org/wiki/GB_18030)
 
 <br />**GB 18030**：**国家标准 GB 18030-2005《信息技术中文编码字符集》。**是中华人民共和国现时最新的内码字集。<br />**​**<br />
 
@@ -65,7 +65,7 @@
 ​<br />
 
 <a name="JbrZW"></a>
-# 3  &emsp; [Unicode ](https://zh.wikipedia.org/wiki/Unicode)
+# 3  &nbsp; [Unicode ](https://zh.wikipedia.org/wiki/Unicode)
 **Unicode：联盟官方中文名称为统一码，台湾官方中文名称为万国码，也译为国际码、单一码，是计算机科学领域的业界标准。**<br />**​**
 
 就上面我们了解了这么多的编码方式，同一个二进制的数字能被解析成不同的符号。因为当打开一个文件必须准确的知道编码方式，否则就可能出现因编码方式错误，导致的乱码现象。<br />​
@@ -94,10 +94,10 @@
 <br />
 
 <a name="edYTH"></a>
-## 3.1 &emsp; [UTF-8 ](https://zh.wikipedia.org/wiki/UTF-8)
-** UTF-8：一种针对 **[**Unicode**](https://zh.wikipedia.org/wiki/Unicode)** 的可变长度字符编码，也是一种**[**前缀码**](https://zh.wikipedia.org/wiki/%E5%89%8D%E7%BC%80%E7%A0%81)**。**互联网的普及促使出现一种统一编码，UTF-8 就是互联网上使用最广的一种 Unicode 的实现方式，其他的实现方式还包含了：UTF-16（使用 2~4 个字节表示）、UTF-32（使用4个字节表示），不过互联网上基本不使用。<br />​
+## 3.1 &nbsp; [UTF-8 ](https://zh.wikipedia.org/wiki/UTF-8)
+** UTF-8：一种针对 Unicode 的可变长度字符编码，也是一种[前缀码](https://zh.wikipedia.org/wiki/%E5%89%8D%E7%BC%80%E7%A0%81)。互联网的普及促使出现一种统一编码，UTF-8 就是互联网上使用最广的一种 Unicode 的实现方式，其他的实现方式还包含了：UTF-16（使用 2~4 个字节表示）、UTF-32（使用4个字节表示），不过互联网上基本不使用。<br />​
 
-**特点：**一种变长的编码方式（128 个 ASCII 字符集使用一个字节，其他随符号不同而变化）<br />​
+**特点**：一种变长的编码方式（128 个 ASCII 字符集使用一个字节，其他随符号不同而变化）<br />​
 
 **编码规则**
 
@@ -119,20 +119,24 @@
 <br />
 <a name="FsxfO"></a>
 
-## 3.2 &emsp; [UTF-16](https://zh.wikipedia.org/wiki/UTF-16)
+## 3.2 &nbsp; [UTF-16](https://zh.wikipedia.org/wiki/UTF-16)
 
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/369637/1636104530700-ce2caa03-ea6a-4a4a-97dc-df2efe24ed73.png#clientId=u5b960f05-d672-4&from=paste&height=166&id=uec2b76f0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=316&originWidth=1140&originalType=binary&ratio=1&size=101461&status=done&style=stroke&taskId=ufee0312d-275e-4734-bdc9-5e22da7f235&width=600)<br />
-概念：编码规则实在没看懂，后边在进行补充吧！<br />优点：大部分字符使用2个字节就能实现表示。<br />缺点：不能兼容 ASCII 编码<br />
+**概念**：编码规则实在没看懂，后边在进行补充吧！<br />
+**优点**：大部分字符使用2个字节就能实现表示。<br />
+**缺点**：不能兼容 ASCII 编码<br />
 
 <br />
 <a name="e3aBb"></a>
 
-## 3.3 &emsp;[UTF-32](https://zh.wikipedia.org/wiki/UTF-32)
+## 3.3 &nbsp;[UTF-32](https://zh.wikipedia.org/wiki/UTF-32)
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/369637/1636104251898-b65732ab-a045-456e-9598-0a8eb00100c5.png#clientId=u5b960f05-d672-4&from=paste&height=114&id=u0f779e2a&margin=%5Bobject%20Object%5D&name=image.png&originHeight=214&originWidth=1130&originalType=binary&ratio=1&size=66006&status=done&style=none&taskId=u34d20e3a-e14c-4f44-bcb2-8db6df089df&width=600)<br />**概念：**使用固定长度的字节表示字符（4 个字节 - 32 个 Byte）。<br />**缺点：**空间浪费极大，基本不会使用。<br />
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/369637/1636104251898-b65732ab-a045-456e-9598-0a8eb00100c5.png#clientId=u5b960f05-d672-4&from=paste&height=114&id=u0f779e2a&margin=%5Bobject%20Object%5D&name=image.png&originHeight=214&originWidth=1130&originalType=binary&ratio=1&size=66006&status=done&style=none&taskId=u34d20e3a-e14c-4f44-bcb2-8db6df089df&width=600)<br /><br/>
+**概念**：使用固定长度的字节表示字符（4 个字节 - 32 个 Byte）。<br />
+**缺点**：空间浪费极大，基本不会使用。<br />
 
 <a name="upxHh"></a>
-## 3.4 &emsp; 字节顺序标记
+## 3.4 &nbsp; 字节顺序标记
 
 - Be 编码（大端序）：高字节在左边，低字节在右边
 - Le 编码（小端序）：高字节在右边，低字节在左边
@@ -149,14 +153,14 @@
 
 
 <a name="xMsal"></a>
-# 4 &emsp; [Base64 编码](https://developer.mozilla.org/zh-CN/docs/Glossary/Base64)
+# 4 &nbsp; [Base64 编码](https://developer.mozilla.org/zh-CN/docs/Glossary/Base64)
 Base64 是一组相近的二进制编码规则。为什么要使用 Base64 编码呢？主要是计算机的数据基本都是按照 ASCII 进行存储的，为了保证数据传输的完整性与传输过程中数据不丢失，会先将字符转成 Base64 之后再进行传输。<br />​
 
 **特点：**每个字符占 6 个字符，不能整除的话补充 0。快速预览表 如下👇🏻：<br />![image.png](https://cdn.nlark.com/yuque/0/2021/png/369637/1636211743367-d6ae6b08-093c-458c-aa10-24f12d0e6d5c.png#clientId=u5c44d8a6-cdc4-4&from=paste&height=452&id=uc5dbd5ca&margin=%5Bobject%20Object%5D&name=image.png&originHeight=495&originWidth=657&originalType=binary&ratio=1&size=382695&status=done&style=none&taskId=u2534b2a5-1214-4c77-bf34-9c239847861&width=600)<br /> （引用自：[https://mp.weixin.qq.com/s/QHi6BVM5Jt8XwZ_FKcRYsg](https://mp.weixin.qq.com/s/QHi6BVM5Jt8XwZ_FKcRYsg)）<br />​<br />
 <a name="ptWlj"></a>
-# 5 &emsp; 编码转换 & 编码方法
+# 5 &nbsp; 编码转换 & 编码方法
 <a name="n0C8y"></a>
-## 5.1  &emsp; 编码转换
+## 5.1  &nbsp; 编码转换
 
 - **Base64、UTF-8、ASCII 关系**
    - utf-8 -> base64(编码) -> ASCII
@@ -164,7 +168,7 @@ Base64 是一组相近的二进制编码规则。为什么要使用 Base64 编�
 
 
 <a name="TNc1I"></a>
-## 5.2 &emsp; 编码方法
+## 5.2 &nbsp; 编码方法
 
 - [encodeURI()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI)：将特定字符进行转义编码，转义字符：除（保留类型 + 非转义字符 + 数字符号）之外。
 - [decodeURI()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/decodeURI)：将👆🏻方法转义的字符进行解码，反转义字符同上。
@@ -177,8 +181,7 @@ Base64 是一组相近的二进制编码规则。为什么要使用 Base64 编�
 >    - encodeURI 和 decodeURI 函数操作的是完整的 URI；这俩函数假定 URI 中的任何保留字符都有特殊意义，所有不会编码它们。
 >    - encodeURIComponent 和 decodeURIComponent 函数操作的是组成 URI 的个别组件；这俩函数假定任何保留字符都代表普通文本，所以必须编码它们，所以它们出现在组成一个完整 URI 的组件里面时不会解释成保留字符了。
 > - **URL：称为统一资源标识符**，是用来标识互联网上的资源和怎么访问这些资源的传输协议的字符串。
-> 
-               组成形式：_Scheme_ : _First_ / _Second_ ; _Third_ ? _Fourth_
+> - 组成形式：_Scheme_ : _First_ / _Second_ ; _Third_ ? _Fourth_
 > - 保留类型：; , / ? : @ & = + $
 > - 非转义字符：字母 数字 - _ . ! ~ * ' ( )
 > - 数字符号：#
@@ -197,7 +200,7 @@ Base64 是一组相近的二进制编码规则。为什么要使用 Base64 编�
 
 <a name="he3pj"></a>
 
-# 6 &emsp; 总结
+# 6 &nbsp; 总结
 
 <br />以上就是涉及编码相关的全部知识，对于UTF-16、UTF-32 写的不是很详细，在我们实际运算中实际也是用的比较少的。大家有兴趣可以通过链接进行详细研究。<br />​
 
@@ -213,12 +216,14 @@ Base64 是一组相近的二进制编码规则。为什么要使用 Base64 编�
 | ASCLL 编码 | 80 |  | /
 
 <br />
+
 > [在线编码解码工具](http://tool.haooyou.com/code)
+
 
 ​<br /><br />
 <a name="yFkWW"></a>
 
-# 7 &emsp; 参考
+# 7 &nbsp; 参考
 > [阮一峰：字符编码笔记：ASCII，Unicode 和 UTF-8](https://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)
 >
 > [字符集与编码](https://juejin.cn/post/6844903793553833998)
