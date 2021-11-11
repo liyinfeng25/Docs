@@ -1,10 +1,3 @@
----
-title: JavaScript 常见编码知识
-date: 2021-11-08
-tags: JavaScript
-categories: 前端-JavaScript
----
-
 # JavaScript 常见编码知识
 
 最近在看文件操作相关的知识，里面涉及到字符编码相关的知识，想接触计算机以来，接触过各种编码：ASCII、GB2312、UTF-8、Base64 等等。为什么有这么多种编码方式？编码发展历程又是怎么样呢？下面就一起去学习一下。<br />​
